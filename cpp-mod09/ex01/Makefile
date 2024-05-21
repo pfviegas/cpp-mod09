@@ -21,7 +21,8 @@ OBJ_DIR = obj/
 
 # Files
 SRC_FILES =	main.cpp \
-			BitcoinExchange.cpp
+			BitcoinExchange.cpp \
+			funcs.cpp
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
 
 #
