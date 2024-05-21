@@ -9,7 +9,7 @@ WHITE	= \033[1;37m
 RESET 	= \033[0m
 
 # Executable name
-NAME = btc
+NAME = RPN
 
 # Compiler options
 CXX = c++
@@ -21,8 +21,7 @@ OBJ_DIR = obj/
 
 # Files
 SRC_FILES =	main.cpp \
-			BitcoinExchange.cpp \
-			funcs.cpp
+			RPN.cpp
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
 
 #

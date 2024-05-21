@@ -1,23 +1,23 @@
 // incluir header 42
 
-#include "../include/BitcoinExchange.hpp"
+#include "../include/RPN.hpp"
 
 int	main(int argc, char **argv)
 {
-	std::ifstream	file;
-	BitcoinExchange *btcValue = NULL;
-	
+	if (argc != 2)
+	{
+		std::cout << "Error: You must enter one argument." << std::endl;
+		return (1);
+	}
+
 	try
 	{
-		checkFile(file, argc, argv);
-		btcValue = new BitcoinExchange(file, argv);
+		RPN	object(argv[1]);
 	}
 	catch (const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
-		return 1;
 	}
 
-	delete btcValue;
-	return (0);
+	return 0;
 }
